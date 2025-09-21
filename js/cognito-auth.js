@@ -124,6 +124,7 @@ var WildRydes = window.WildRydes || {};
                 window.location.href = 'ride.html';
             },
             function signinError(err) {
+                console.log("login failure")
                 alert(err);
             }
         );
@@ -142,7 +143,12 @@ var WildRydes = window.WildRydes || {};
                 window.location.href = 'verify.html';
             }
         };
+
+        console.log("email",email)
+        console.log("password",password)
+        
         var onFailure = function registerFailure(err) {
+            console.log("Register Failure")
             alert(err);
         };
         event.preventDefault();
@@ -166,6 +172,7 @@ var WildRydes = window.WildRydes || {};
                 window.location.href = signinUrl;
             },
             function verifyError(err) {
+                console.log("Verify failure")
                 alert(err);
             }
         );
